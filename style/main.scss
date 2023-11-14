@@ -1,5 +1,6 @@
 @import "helpers";
 @import "fonts/clear-sans.css";
+@import "ai";
 
 $field-width: 500px;
 $grid-spacing: 15px;
@@ -143,6 +144,7 @@ hr {
 .container {
   width: $field-width;
   margin: 0 auto;
+  position: relative;
 }
 
 @include keyframes(fade-in) {

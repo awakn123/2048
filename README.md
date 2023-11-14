@@ -5,5 +5,9 @@ Work as the final project of CS5100: Foundations of Artificial Intelligence at 2
 
 Implement an AI agent and some simple algorithms. [Demo](http://awakn123.github.io/2048/)
 
+### Developer command:
+[sass](https://sass-lang.com/) installation: ```npm install -g sass```, running: ```sass --watch style/main.scss style/main.css```
+
+
 ### Contributions
 Yun Cao, Jitong Zou
