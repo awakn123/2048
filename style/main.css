@@ -1,4 +1,8 @@
 @import "fonts/clear-sans.css";
+.container {
+  position: relative;
+}
+
 .ai_left {
   position: absolute;
   top: 0;
@@ -145,7 +149,6 @@ hr {
 .container {
   width: 500px;
   margin: 0 auto;
-  position: relative;
 }
 
 @-webkit-keyframes $animation-name {

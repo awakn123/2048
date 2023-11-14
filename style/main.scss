@@ -144,7 +144,6 @@ hr {
 .container {
   width: $field-width;
   margin: 0 auto;
-  position: relative;
 }
 
 @include keyframes(fade-in) {
