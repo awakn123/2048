@@ -34,6 +34,7 @@ aiStatus.prototype.start = function() {
   this.statusText = "Running " + this.agent.name;
   this.buttonText = "Pause";
   this.apply();
+  this.agent.run();
 };
 
 aiStatus.prototype.pause = function() {
@@ -41,6 +42,7 @@ aiStatus.prototype.pause = function() {
   this.statusText = "Pause " + this.agent.name;
   this.buttonText = "Play";
   this.apply();
+  this.agent.cancel();
 };
 
 aiStatus.prototype.control = function() {

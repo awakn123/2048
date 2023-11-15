@@ -1,11 +1,29 @@
 /**
  * This file contains all agents implementation.
  */
-console.log("AI agents");
 
 class AbstractAgent {
   constructor() {
     this.name = "AbstractAgent";
+    this.intervalIdx = 0;
+  }
+
+  getAction() {
+    throw new Error("Not Implement");
+  }
+
+  moveToNext() {
+    let action = this.getAction();
+    window.gameManager.move(action);
+  }
+
+  run() {
+    this.intervalIdx = setInterval(() => this.moveToNext(), 1000);
+  }
+
+  cancel() {
+    clearInterval(this.intervalIdx);
+    this.intervalIdx = 0;
   }
 
 }
@@ -16,6 +34,9 @@ class GoWestAgent extends AbstractAgent{
     this.name = "Go West";
   }
 
+  getAction() {
+    return 3;
+  }
 }
 
 class DFSAgent extends AbstractAgent{
