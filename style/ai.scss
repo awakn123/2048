@@ -1,9 +1,43 @@
+$game-container-background: #bbada0;
+$bright-text-color: #f9f6f2;
+
 .container {
   position: relative;
 }
 .ai_left {
   position: absolute;
   top: 0;
-  left: -80px;
-  width: 80px;
+  left: -180px;
+  width: 160px;
+}
+
+.ai_status {
+  position: relative;
+  background: $game-container-background;
+  padding: 15px 25px;
+  font-size: 20px;
+  height: 30px;
+  font-weight: bold;
+  border-radius: 3px;
+  color: white;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.ai_button {
+  display: block;
+  width: 100%;
+  background: darken($game-container-background, 20%);
+  border: 0px;
+  border-radius: 3px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: $bright-text-color;
+  height: 40px;
+  line-height: 42px;
+  margin: 8px 0;
+}
+
+.ai_agent {
+  margin-top: 120px;
 }
