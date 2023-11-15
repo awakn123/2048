@@ -6,8 +6,8 @@ function aiStatus() {
   this.statusText = 'Select An Agent';
   this.buttonText = '';
   this.agent = {};
-  this.statusContainer    = document.querySelector(".ai_status");
-  this.buttonContainer    = document.querySelector(".ai_control");
+  this.statusContainer = document.querySelector(".ai_status");
+  this.buttonContainer = document.querySelector(".ai_control");
 }
 
 aiStatus.prototype.apply = function() {
