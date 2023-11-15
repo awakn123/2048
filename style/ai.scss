@@ -16,7 +16,7 @@ $bright-text-color: #f9f6f2;
   background: $game-container-background;
   padding: 15px 25px;
   font-size: 20px;
-  height: 30px;
+  height: 56px;
   font-weight: bold;
   border-radius: 3px;
   color: white;
@@ -40,4 +40,8 @@ $bright-text-color: #f9f6f2;
 
 .ai_agent {
   margin-top: 120px;
+}
+
+.hide {
+  display: none;
 }

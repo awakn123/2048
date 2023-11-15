@@ -15,7 +15,7 @@
   background: #bbada0;
   padding: 15px 25px;
   font-size: 20px;
-  height: 30px;
+  height: 56px;
   font-weight: bold;
   border-radius: 3px;
   color: white;
@@ -39,6 +39,10 @@
 
 .ai_agent {
   margin-top: 120px;
+}
+
+.hide {
+  display: none;
 }
 
 html, body {
