@@ -39,9 +39,10 @@ class GoWestAgent extends AbstractAgent{
   }
 }
 
-class DFSAgent extends AbstractAgent{
-  constructor() {
-    super();
-    this.name = "DFS";
+class DLSAgent extends AbstractAgent{
+  constructor(props) {
+    super(props);
+    this.name = "DLS";
   }
+
 }
