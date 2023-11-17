@@ -14,8 +14,11 @@ class AbstractAgent {
 
   moveToNext() {
     let action = this.getAction();
-    if (!action)
+    if (action === null) {
+      console.log("Fail to generation Action");
+      this.cancel();
       return;
+    }
     window.gameManager.move(action);
   }
 

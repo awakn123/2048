@@ -1,3 +1,21 @@
+const TimeConsumer = function() {
+  this.arr = [];
+};
+TimeConsumer.prototype.mark = function(name) {
+  this.arr.push({name, t: new Date()});
+};
+TimeConsumer.prototype.print = function() {
+  let prev = null;
+  console.table(this.arr.map((item, idx)=> {
+    let p = idx === 0 ? 0 : item.t - prev.t;
+    prev = item;
+    return {name: item.name, p};
+  }));
+};
+TimeConsumer.prototype.clear = function() {
+  this.arr = [];
+}
+const tc = new TimeConsumer();
 const SimulationGM = function(gameManager) {
   this.size = gameManager.size;
   this.grid = new Grid(gameManager.grid.size, gameManager.grid.serialize().cells);
