@@ -70,5 +70,6 @@ const bindButtonPress = function (selector, fn) {
 (function(){
   bindButtonPress(".go-west", () => status.setAgent(new GoWestAgent()));
   bindButtonPress(".dls", () => status.setAgent(new DLSAgent()));
+  bindButtonPress(".bfs", () => status.setAgent(new BFSAgent()));
   bindButtonPress(".ai_control", () => status.control());
 })();
