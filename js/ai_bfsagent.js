@@ -1,5 +1,5 @@
 // Class BFSAgent: Represents an agent that uses Breadth-First Search (BFS)
-class BFSAgent extends AbstractAgent{
+class BFSAgent extends AbstractAgent {
   constructor(props) {
     super(props);
     this.name = "BFS"; // Setting the agent name as 'BFS'
@@ -7,5 +7,6 @@ class BFSAgent extends AbstractAgent{
 
   // getAction: Determines the next action for the agent
   getAction() {
-    return null;
+    return 0;
   }
+}
