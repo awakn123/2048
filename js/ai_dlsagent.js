@@ -3,6 +3,7 @@ class DLSAgent extends AbstractAgent{
   constructor(props) {
     super(props);
     this.name = "DLS"; // Setting the agent name as 'DLS'
+    this.depthLimit = 5;
   }
 
   // getAction: Determines the next action for the agent
@@ -10,7 +11,7 @@ class DLSAgent extends AbstractAgent{
     let sim = new SimulationGM(window.gameManager);
     if (sim.isGameTerminated()) // Check if the game is over
       return null;
-    let bestAction = this.dls(0, sim, 3); // Perform DLS to find the best action
+    let bestAction = this.dls(0, sim, this.depthLimit); // Perform DLS to find the best action
     return bestAction;
   }
 

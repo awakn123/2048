@@ -16,6 +16,10 @@ Implement an AI agent and some simple algorithms.
 ### References
 1. gabrielecirulli's 2048 https://github.com/gabrielecirulli/2048
 2. ovolve Mini-Max AI https://github.com/ovolve/2048-AI
+3. Iris Kohler, Theresa Migler, and Foaad Khosmood. "Composition of Basic
+   Heuristics for the Game 2048" Presented at the 2014 IEEE Conference on
+   Computational Intelligence and Games.
+   https://theresamigler.files.wordpress.com/2020/03/2048.pdf
 
 ### Contributions
 Yun Cao, Jitong Zou
