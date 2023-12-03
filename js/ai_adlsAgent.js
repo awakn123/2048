@@ -1,3 +1,4 @@
+// Average Depth Limited Search Agent.
 class ADLSAgent extends AbstractAgent {
   constructor(props) {
     super(props);
@@ -6,6 +7,7 @@ class ADLSAgent extends AbstractAgent {
     this.depthLimit = 5;
   }
 
+  // Get the most frequent action after several tryings.
   getAction() {
     let bestAction = null, bestCnt = 0;
     for (let i = 0; i < this.averageNum; i++) {
