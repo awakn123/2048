@@ -3,8 +3,8 @@ class ADLSAgent extends AbstractAgent {
   constructor(props) {
     super(props);
     this.name = 'ADLS';
-    this.averageNum = 5;
-    this.depthLimit = 5;
+    this.averageNum = window.config.adlsTimes;
+    this.depthLimit = window.config.adlsDepth;
   }
 
   // Get the most frequent action after several tryings.

@@ -3,7 +3,7 @@ class DLSAgent extends AbstractAgent{
   constructor(props) {
     super(props);
     this.name = "DLS"; // Setting the agent name as 'DLS'
-    this.depthLimit = 5;
+    this.depthLimit = window.config.dlsDepth;
   }
 
   // getAction: Determines the next action for the agent
