@@ -14,7 +14,7 @@ class AbstractAgent {
 
   moveToNext() {
     if (!this.running) {
-      return false;
+      return;
     }
     let action = this.getAction();
     if (action === null) {
@@ -23,11 +23,7 @@ class AbstractAgent {
       return;
     }
     window.gameManager.move(action);
-    if (window.config.waitTime > 0) {
-      setTimeout(() => this.moveToNext(), window.config.waitTime);
-    } else {
-      this.moveToNext();
-    }
+    setTimeout(() => this.moveToNext(), window.config.waitTime);
   }
 
   run() {
