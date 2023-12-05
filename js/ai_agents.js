@@ -5,7 +5,7 @@
 class AbstractAgent {
   constructor() {
     this.name = "AbstractAgent";
-    this.intervalIdx = 0;
+    this.running = true;
   }
 
   getAction() {
@@ -13,6 +13,9 @@ class AbstractAgent {
   }
 
   moveToNext() {
+    if (!this.running) {
+      return false;
+    }
     let action = this.getAction();
     if (action === null) {
       console.log("Fail to generation Action");
@@ -20,15 +23,20 @@ class AbstractAgent {
       return;
     }
     window.gameManager.move(action);
+    if (window.config.waitTime > 0) {
+      setTimeout(() => this.moveToNext(), window.config.waitTime);
+    } else {
+      this.moveToNext();
+    }
   }
 
   run() {
-    this.intervalIdx = setInterval(() => this.moveToNext(), 1000);
+    this.running = true;
+    this.moveToNext();
   }
 
   cancel() {
-    clearInterval(this.intervalIdx);
-    this.intervalIdx = 0;
+    this.running = false;
   }
 
 }
