@@ -73,8 +73,18 @@
     </div>
 
     <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+      <strong class="important">AI Configuration:</strong> Edit <strong>config.js</strong> to change the default setting.
+      You could change it under web console by <strong>F12</strong>, too. Now support:
     </p>
+    <pre>
+      window.config = {
+        dlsDepth:5,
+        bfsDepth:5,
+        adlsDepth: 5,
+        adlsTimes: 5,
+        waitTime: 1000,
+      };
+    </pre>
     <hr>
     <p>
       This project represents the culmination of CS5100, Foundations of Artificial Intelligence,
