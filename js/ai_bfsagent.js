@@ -3,7 +3,7 @@ class BFSAgent extends AbstractAgent {
   constructor(props) {
     super(props);
     this.name = 'BFS'; // Setting the agent name as 'BFS'
-    this.maxDepth = 5; // Maximum depth limit
+    this.maxDepth = window.config.bfsDepth; // Maximum depth limit
   }
 
   // getAction: Determines the next action for the agent

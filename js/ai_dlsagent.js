@@ -3,7 +3,7 @@ class DLSAgent extends AbstractAgent{
   constructor(props) {
     super(props);
     this.name = "DLS"; // Setting the agent name as 'DLS'
-    this.depthLimit = 5;
+    this.depthLimit = window.config.dlsDepth;
   }
 
   // getAction: Determines the next action for the agent
@@ -24,7 +24,9 @@ class DLSAgent extends AbstractAgent{
     let self = this;
     [0, 1, 2, 3].map(function(action) { // Iterate over possible actions
       let nextSim = new SimulationGM(sim);
-      self.simMove(nextSim, action); // Perform the move in the simulation
+      let moved = self.simMove(nextSim, action); // Perform the move in the simulation
+      if (!moved)
+        return;
       let score = self.dls(depth + 1, nextSim, limit);
       if (score > bestScore) { // Update best score and action if current score is better
         bestScore = score;
@@ -44,6 +46,7 @@ class DLSAgent extends AbstractAgent{
         sim.over = true; // Game over!
       }
     }
+    return moved;
   }
 
   // evaluate: Returns the score of the simulation state
