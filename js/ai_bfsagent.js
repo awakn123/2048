@@ -20,14 +20,18 @@ class BFSAgent extends AbstractAgent {
       // Add all unvisited neighbors to the queue
       [0, 1, 2, 3].map(function(action) { // Iterate over possible actions
         let nextSim = new SimulationGM(sim);
+        if (nextSim.isGameTerminated()) {
+          return;
+        }
         let moved = self.simMove(nextSim, action); // Perform the move in the simulation
-        if (moved && !nextSim.isGameTerminated()) {
+        if (moved) {
           if (typeof (first) === 'undefined') {
             first = action;
           }
           queue.push({sim: nextSim, depth: depth + 1, first});
-          if (bestScore < nextSim.score) {
-            bestScore = self.evaluate(nextSim);
+          let score = self.evaluate(nextSim);
+          if (bestScore < score) {
+            bestScore = score;
             bestAction = first;
           }
         }
